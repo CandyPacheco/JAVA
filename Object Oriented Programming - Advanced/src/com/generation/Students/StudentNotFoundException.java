@@ -1,5 +1,4 @@
-package com.generation;
-
+package com.generation.Students;
 public class StudentNotFoundException
     extends Exception
 {

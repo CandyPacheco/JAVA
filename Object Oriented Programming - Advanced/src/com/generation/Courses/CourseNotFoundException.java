@@ -1,4 +1,4 @@
-package com.generation;
+package com.generation.Courses;
 
 public class CourseNotFoundException extends Exception
 {

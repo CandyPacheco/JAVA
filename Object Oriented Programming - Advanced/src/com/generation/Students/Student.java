@@ -1,25 +1,55 @@
-package com.generation;
+package com.generation.Students;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import com.generation.Courses.Course;
 
 public class Student
 {
-    public String name;
+    private String name;
 
-    public String id;
+    private String id;
 
-    public int age;
+    private int age;
 
-    public final List<Course> courseList = new ArrayList<>();
+    private final List<Course> courseList = new ArrayList<>();
 
     public Student( String name, String id, int age)
     {
         this.name = name;
         this.id = id;
+        this.age = age; 
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
         this.age = age;
     }
+
+    public List<Course> getCourseList() {
+        return courseList;
+    }
+
+
+    
 }

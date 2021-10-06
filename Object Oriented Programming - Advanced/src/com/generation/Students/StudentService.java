@@ -1,17 +1,18 @@
-package com.generation;
+package com.generation.Students;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import com.generation.Courses.Course;
+
 public class StudentService
 {
-    HashMap<String, Course> courseList = new HashMap<>();
+    private HashMap<String, Course> courseList = new HashMap<>();
 
-    HashMap<String, Student> students = new HashMap<>();
+    private HashMap<String, Student> students = new HashMap<>();
 
-    HashMap<String, List<Course>> coursesEnrolledByStudents = new HashMap<>();
-
+    private HashMap<String, List<Course>> coursesEnrolledByStudents = new HashMap<>();
 
     public StudentService()
     {
@@ -50,4 +51,47 @@ public class StudentService
     public void showAllCourses(){
         //TODO implement using collections loops
     }
+
+        
+    public HashMap<String, Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(HashMap<String, Student> students) {
+        this.students = students;
+    }
+
+    public HashMap<String, Course> getCourseList() {
+        return courseList;
+    }
+
+    public void setCourseList(HashMap<String, Course> courseList) {
+        this.courseList = courseList;
+    }
+
+    public HashMap<String, List<Course>> getCoursesEnrolledByStudents() {
+        return coursesEnrolledByStudents;
+    }
+
+    public void setCoursesEnrolledByStudents(HashMap<String, List<Course>> coursesEnrolledByStudents) {
+        this.coursesEnrolledByStudents = coursesEnrolledByStudents;
+    }
+
+    public void addNewStudent(String keyID, Student student){
+    students.put(keyID, student);
+    }
+
+    public void getAllData() {
+        for (String i : getStudents().keySet()) 
+        { 
+            System.out.println(i + ": " + getStudents().get(i)); 
+        }
+        
+    }
+
+//for (String keys : objectSet.keySet())  
+//{
+//    System.out.println(keys + ":"+ objectSet.get(keys));
+// }
+
 }

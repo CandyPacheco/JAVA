@@ -1,12 +1,12 @@
-package com.generation;
+package com.generation.Courses;
 
 public class Course
 {
-    public String name;
+    private String name;
 
-    public int credits;
+    private int credits;
 
-    public String professorName;
+    private String professorName;
 
     public Course( String name, int credits, String professorName )
     {
@@ -14,4 +14,30 @@ public class Course
         this.credits = credits;
         this.professorName = professorName;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getCredits() {
+        return credits;
+    }
+
+    public void setCredits(int credits) {
+        this.credits = credits;
+    }
+
+    public String getProfessorName() {
+        return professorName;
+    }
+
+    public void setProfessorName(String professorName) {
+        this.professorName = professorName;
+    }
+
+    
 }
