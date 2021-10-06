@@ -3,6 +3,7 @@ package com.generation.Students;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map.Entry;
 
 import com.generation.Courses.Course;
 
@@ -82,9 +83,9 @@ public class StudentService
     }
 
     public void getAllData() {
-        for (String i : getStudents().keySet()) 
+        for (Entry<String, Student> i : getStudents().entrySet()) 
         { 
-            System.out.println(i + ": " + getStudents().get(i)); 
+        System.out.println(i.getKey()+ "-" + i.getValue());
         }
         
     }
